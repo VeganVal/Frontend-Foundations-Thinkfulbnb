@@ -39,6 +39,7 @@ main img {
 .group {
   display: flex;
   flex-direction: column;
+  margin-bottom: 100px;
 }
 
 .item {
@@ -53,26 +54,49 @@ main img {
 /* -------  Navigation ------- */
 
 header {
-  background-color: #ff385c;
+  background-color: #ded3ca;
   padding: 20px 20px 0 20px;
   text-align: center;
 }
 
 .logo {
-  font-family: "Pangolin", cursive;
+  font-family: 'Roboto', sans-serif; /*cursive*/
   font-size: 72px;
-  color: #fff;
+  color: #756763;
+}
+header nav {
+  display: flex;
+  justify-content: center;
+}
+
+
+header nav ul {
+  display:flex;    /*the logo should stack on top of the menu links, which are aligned horizontally*/
+  list-style: none;
+  padding-left: 0;
+  
 }
 
 header nav ul li {
-  list-style-type: none;
+  display:flex;
+  list-style: none;
+  padding-left: 0;
+  font-size: large;
+  
 }
 
 header nav ul li a {
-  color: #fff;
+  color: #756763;
   text-decoration: none;
   padding: 0 20px 0 0;
 }
+
+header nav ul li:last-child a {
+  margin-right: 0;
+  padding-right: 0;
+}
+
+
 
 header nav ul li a:hover {
   color: #bdbdbd;
@@ -81,7 +105,10 @@ header nav ul li a:hover {
 
 /* -------  Search Form ------- */
 form {
-  border: 2px solid #ff385c;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 2px solid #77676a;
   padding: 10px;
 }
 
@@ -117,3 +144,4 @@ footer p {
 }
 
 /* -------  Media Query ------- */
+
