@@ -139,7 +139,7 @@ footer p {
     flex-direction: row;
     justify-content: space-between;
     padding-bottom: 20px;
-    align-items: center;
+    align-items: row;
   }
   
   form {
@@ -225,10 +225,10 @@ footer p {
   
   /* ---  Groups & Items --- */
   
-  .group {
+ /* .group {
     display: flex;
     flex-direction: column;
-  }
+  } */
   
   .item {
     flex: 1;
@@ -318,3 +318,6 @@ footer p {
     padding: 20px;
   }
 }
+
+
+
