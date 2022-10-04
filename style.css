@@ -1,11 +1,9 @@
-/* -------  General Styles ------- */
-
 body {
   font-family: "Lato", sans-serif;
 }
 
 h2 {
-  font-size: 26px;
+  font-size: clamp(14px, -1rem + 8.333vw, 26px);  color: #fff;
   font-weight: 400;
   margin: 0 10px 10px 10px;
   text-align: center;
@@ -31,7 +29,11 @@ section.alternate-background {
 }
 
 main img {
-  width: 100px;
+  width: 100%;
+}
+
+.dark {
+  color: black;
 }
 
 /* ---  Groups & Items --- */
@@ -39,7 +41,6 @@ main img {
 .group {
   display: flex;
   flex-direction: column;
-  margin-bottom: 100px;
 }
 
 .item {
@@ -54,16 +55,16 @@ main img {
 /* -------  Navigation ------- */
 
 header {
-  background-color: #ded3ca;
+  background-color: #ff385c;
   padding: 20px 20px 0 20px;
   text-align: center;
 }
 
 .logo {
-  font-family: 'Roboto', sans-serif; /*cursive*/
-  font-size: 72px;
-  color: #756763;
+  font-family: "Pangolin", cursive;
+  font-size: clamp(24px, -1rem + 8.333vw, 72px);  color: #fff;
 }
+
 header nav {
   display: flex;
   justify-content: center;
@@ -71,32 +72,20 @@ header nav {
 
 
 header nav ul {
-  display:flex;    /*the logo should stack on top of the menu links, which are aligned horizontally*/
-  list-style: none;
-  padding-left: 0;
-  
+  display: flex;
+  flex-wrap: wrap;
+
 }
 
 header nav ul li {
-  display:flex;
-  list-style: none;
-  padding-left: 0;
-  font-size: large;
-  
+  list-style-type: none;
 }
 
 header nav ul li a {
-  color: #756763;
+  color: #fff;
   text-decoration: none;
   padding: 0 20px 0 0;
 }
-
-header nav ul li:last-child a {
-  margin-right: 0;
-  padding-right: 0;
-}
-
-
 
 header nav ul li a:hover {
   color: #bdbdbd;
@@ -105,11 +94,10 @@ header nav ul li a:hover {
 
 /* -------  Search Form ------- */
 form {
-  display:flex;
-  flex-direction: column;
-  justify-content: space-between;
-  border: 2px solid #77676a;
+  border: 2px solid #ff385c;
   padding: 10px;
+   display: flex;
+  justify-content: center;
 }
 
 form label {
@@ -131,6 +119,12 @@ form button {
   width: 100%;
 }
 
+form div {
+  display: flex;
+  justify-content: space-between;
+}
+
+
 /* -------  Footer ------- */
 
 footer {
@@ -145,3 +139,50 @@ footer p {
 
 /* -------  Media Query ------- */
 
+@media all and (min-width: 480px) {
+
+  /* ------ General ------ */
+
+  p {
+    padding: 10px;
+  }
+
+  .group-lg{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  
+  /* ------ Navigation ------ */
+
+  header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  header div {
+    display: flex;
+    align-items: center;
+  }
+
+  /* ------ Form -----*/
+  form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  form div {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  form button {
+    margin: 10px;
+    width: 100%;
+  }
+
+}
